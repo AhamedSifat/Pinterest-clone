@@ -1,0 +1,174 @@
+.editor {
+  display: flex;
+  gap: 16px;
+}
+
+.layers {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.layers h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.layers p {
+  font-size: 14px;
+  color: gray;
+  margin-top: 4px;
+}
+
+.layer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 16px;
+  cursor: pointer;
+  font-weight: 300;
+  font-size: 14px;
+}
+.layer:hover,
+.layer.selected {
+  background-color: #f0f0f0;
+}
+
+.layerImg {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.workspace {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e9e9e9;
+  padding: 64px 0px;
+}
+
+.canvas {
+  width: 375px;
+  border-radius: 32px;
+  overflow: hidden;
+  align-items: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.canvas img {
+  width: 100%;
+}
+
+.text {
+  position: absolute;
+  z-index: 99;
+  max-width: 100%;
+  border: 1px dashed red;
+}
+
+.text input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: inherit;
+  cursor: grab;
+  width: 100%;
+}
+
+.deleteTextButton {
+  position: absolute;
+  top: -36px;
+  right: 0;
+  background-color: white;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  border-radius: 100%;
+}
+
+.options {
+  flex: 1;
+  margin-top: 32px;
+}
+
+.editingOption {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-direction: column;
+}
+
+.editingOption span {
+  font-weight: 500;
+}
+
+.editingOption input {
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.textColor,
+.bgColor {
+  position: relative;
+}
+
+.colorPreview {
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  background-color: #000;
+  cursor: pointer;
+}
+
+.colorPicker {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background-color: white;
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  z-index: 99;
+}
+
+.orientations,
+.sizes {
+  padding: 4px;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  display: flex;
+  font-size: 14px;
+  width: max-content;
+  font-weight: 500;
+}
+
+.orientation,
+.size {
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  min-width: 36px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.orientation.selected,
+.size.selected {
+  background-color: white;
+}
